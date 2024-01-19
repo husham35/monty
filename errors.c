@@ -72,13 +72,13 @@ void opc_errs(int err_num, unsigned int ln)
 		fprintf(stderr, "L%d: usage: push integer\n", ln);
 		break;
 	case PINT_ERROR:
-		fprintf(stderr, "L%d: can't pint_opc, stack empty\n", ln);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", ln);
 		break;
 	case POP_ERROR:
 		fprintf(stderr, "L%d: can't pop an empty stack\n", ln);
 		break;
 	case SWAP_ERROR:
-		fprintf(stderr, "L%d: can't swap_opc, stack too short\n", ln);
+		fprintf(stderr, "L%d: can't swap, stack too short\n", ln);
 		break;
 	case ADD_ERROR:
 		fprintf(stderr, "L%d: can't add, stack too short\n", ln);
