@@ -4,13 +4,13 @@ stack_t *head = NULL;
 
 /**
  * main - starting poing or programme
- * @argc: Number of arguments passed into the program.
- * @argv: Vector containing the arguments passed.
+ * @arg_counter: number of args passed into program at runtime
+ * @arg_vect: arrya of args passed at rruntime
  * Description: main entry point of programme
- * Return: always 0.
+ * Return: always 0
  */
 
-int main(int argc, char *argv[])
+int main(int arg_counter, char *arg_vect[])
 {
 	FILE *mf = NULL;
 	size_t len_command = 0;
@@ -19,8 +19,8 @@ int main(int argc, char *argv[])
 	int status = 0;
 	char *file_name = NULL, *opc = NULL, *data = NULL, *ln_rd = NULL;
 
-	file_name = argv[1];
-	get_num_args(argc);
+	file_name = arg_vect[1];
+	get_num_args(arg_counter);
 	mf = open_file(file_name);
 
 	/* cmd = getline(&ln_rd, &len_command, mf); */
