@@ -22,7 +22,9 @@ int main(int argc, char *argv[])
 	get_num_args(argc);
 	mf = open_file(file_name);
 
-	while ((cmd = getline(&ln_rd, &len_command, mf)) != -1)
+	cmd = getline(&ln_rd, &len_command, mf);
+
+	while ((getline(&ln_rd, &len_command, mf)) != -1)
 	{
 		ln_num++;
 		opc = strtok(ln_rd, " \t\n");
