@@ -15,14 +15,15 @@ int main(int argc, char *argv[])
 	FILE *mf = NULL;
 	size_t len_command = 0;
 	unsigned int ln_num = 0;
-	int cmd = 0, status = 0;
+	/*int cmd = 0;*/
+	int status = 0;
 	char *file_name = NULL, *opc = NULL, *data = NULL, *ln_rd = NULL;
 
 	file_name = argv[1];
 	get_num_args(argc);
 	mf = open_file(file_name);
 
-	cmd = getline(&ln_rd, &len_command, mf);
+	/* cmd = getline(&ln_rd, &len_command, mf); */
 
 	while ((getline(&ln_rd, &len_command, mf)) != -1)
 	{
