@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 
 	/* cmd = getline(&ln_rd, &len_command, mf); */
 
-	while ((getline(&ln_rd, &len_command, mf)) != -1)
+	while (getline(&ln_rd, &len_command, mf) != -1)
 	{
 		ln_num++;
 		opc = strtok(ln_rd, " \t\n");
