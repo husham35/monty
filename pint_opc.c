@@ -9,7 +9,7 @@
  */
 void pint_opc(stack_t **stack, unsigned int ln_num)
 {
-	if (*stack == NULL)
+	if (*stack == NULL || stack == NULL)
 		man_errs(PINT_ERROR, NULL, ln_num, NULL);
 
 	printf("%d\n", (*stack)->n);
